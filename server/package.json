@@ -1,0 +1,23 @@
+{
+  "name": "app_with_docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alokkumar9/app_with_docker.git"
+  },
+  "author": "Alok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alokkumar9/app_with_docker/issues"
+  },
+  "homepage": "https://github.com/alokkumar9/app_with_docker#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
