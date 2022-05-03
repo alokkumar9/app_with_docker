@@ -9,6 +9,10 @@ const server = http.createServer((req, res) => {
   res.end('Hello Alok');
 });
 
+var todosRouter = require('./routes/todos');
+app.use('/api/todos', todos);
+
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+

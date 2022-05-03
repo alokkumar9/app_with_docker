@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/alokkumar9/app_with_docker#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
   }
 }
