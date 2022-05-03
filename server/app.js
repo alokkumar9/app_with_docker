@@ -1,18 +1,25 @@
-const http = require('http');
+const express = require("express");
+const app = express();
+const port =process.env.port||3000;
+const todos = require("./routes/todos");
 
-const hostname = '127.0.0.1';
-const port = 3000;
+app.use('/things',todos);
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Alok');
+app.get('/', (req, res) => {
+  res.send('GET request to the homepage')
 });
 
-var todosRouter = require('./routes/todos');
-app.use('/api/todos', todos);
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.get('/things/cars', (req, res) => {
+  res.send('things car');
 });
 
+app.post('/things/cars', function (req, res) {
+  res.send('POST request to the homepage')
+});
+
+app.listen(port,err => {
+if(err){
+  return console.log("ERROR",err);
+}
+console.log("Listening on port ${port}");
+});
